@@ -2,7 +2,9 @@
 require 'bundler'
 Bundler.setup
 
-require_relative '../lib/viva'
+$: << Pathname(__FILE__).dirname.join('..', 'lib').expand_path
+
+require 'viva'
 require 'rufus-scheduler'
 
 require 'sequel'
